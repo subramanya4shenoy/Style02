@@ -24,20 +24,21 @@ const ActionCard = () => {
             uri: 'https://img.freepik.com/premium-photo/4k-beautiful-nature-abstract-background_939808-11390.jpg',
           }}
         />
-      </View>
-      <View style={styles.bodyContainer}>
-        <Text numberOfLines={20}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim harum
-          dolore autem ut itaque atque natus qui, esse vitae minima asperiores
-          amet nihil ipsam aliquid error tempore ea officia fugit!
-        </Text>
-        <View style={styles.bodyFooter}>
-          <TouchableOpacity onPress={() => openWebsite('https://google.com')}>
-            <Text> Read more </Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => openWebsite('https://youtube.com')}>
-            <Text> follow me </Text>
-          </TouchableOpacity>
+        <View style={styles.bodyContainer}>
+          <Text numberOfLines={20}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim harum
+            dolore autem ut itaque atque natus qui, esse vitae minima asperiores
+            amet nihil ipsam aliquid error tempore ea officia fugit!
+          </Text>
+          <View style={styles.bodyFooter}>
+            <TouchableOpacity onPress={() => openWebsite('https://google.com')}>
+              <Text> Read more </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => openWebsite('https://youtube.com')}>
+              <Text> follow me </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
@@ -53,21 +54,38 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   headerText: {
-    fontSize: 12,
+    fontSize: 18,
     fontWeight: '900',
+    padding: 3,
   },
   cardImage: {
     height: 100,
   },
   card: {
-    margin: 8,
+    marginVertical: 12,
+    marginHorizontal: 12,
+    padding: 4,
     backgroundColor: '#ffffff',
     borderRadius: 4,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: '#ff4532'
   },
   cardElevated: {
     elevation: 4,
     marginBottom: 8,
   },
-  bodyContainer: {},
-  bodyFooter: {},
+  bodyContainer: {
+    flex: 1,
+  },
+  bodyFooter: {
+    flex: 1,
+    margin: 12,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#f563ff',
+    alignItems: 'center',
+  },
 });
